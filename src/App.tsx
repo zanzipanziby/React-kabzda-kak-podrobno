@@ -10,8 +10,8 @@ function App() {
             <Page title="Hello, samurai! Let's go!"/>
             <Page title="My friends"/>
             <Rating value={5}/>
-            <Accordion titleValue="menu" collapsed = {true}/>
-            <Accordion titleValue="contacts" collapsed = {false}/>
+            <Accordion titleValue="menu" collapsed={true}/>
+            <Accordion titleValue="contacts" collapsed={false}/>
             <Rating value={4}/>
             <Rating value={3}/>
             <Rating value={2}/>
@@ -21,9 +21,11 @@ function App() {
         </div>
     );
 }
+
 type PagePropsType = {
     title: string;
 }
+
 function Page(props: PagePropsType) {
     return (
         <h1>{props.title}</h1>
@@ -32,3 +34,5 @@ function Page(props: PagePropsType) {
 
 
 export default App;
+
+
