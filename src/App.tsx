@@ -17,7 +17,7 @@ function App() {
             <Rating value={2}/>
             <Rating value={1}/>
             <Rating value={0}/>
-
+            <>This is tsx fragment</>
         </div>
     );
 }
