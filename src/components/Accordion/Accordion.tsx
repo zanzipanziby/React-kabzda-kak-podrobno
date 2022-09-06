@@ -18,6 +18,7 @@ function Accordion(props: AccordionPropsType) {
             <div>
                 <AccordionTitle title={props.titleValue}/>
                 <AccordionBody/>
+
             </div>
         )
     }
