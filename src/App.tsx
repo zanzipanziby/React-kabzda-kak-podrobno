@@ -1,32 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import Rating from "./components/Rating/Rating";
+import {Accordion} from "./components/Accordion/Accordion";
+import {UncontroledRating} from "./components/UncontroledRating/UncontroledRating";
+import OnOff from "./components/OnOff/OnOff";
+import {UncontroledAccordion} from "./components/UncontroledAccordion/UncontroledAccordion";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
+import OnOff_1 from "./components/UncontroledOnOff/UncontroledOnOff";
+import UncontroledOnOff from "./components/UncontroledOnOff/UncontroledOnOff";
 
 function App() {
-    //debugger;
+
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [collapsed, setCollapsed] = useState<boolean>(true)
+    const [on, setOn] = useState(false)
     return (
         <div className="App">
-            <Page title="Hello, samurai! Let's go!"/>
-            <Page title="My friends"/>
-            <Rating value={5}/>
-            <Accordion titleValue="menu" collapsed={true}/>
-            <Accordion titleValue="contacts" collapsed={false}/>
-            <Rating value={4}/>
-            <Rating value={3}/>
-            <Rating value={2}/>
-            <Rating value={1}/>
-            <Rating value={0}/>
-            <>This is tsx fragment</>
+            <AppTitle title="AppTitle"/>
+            <AppTitle title="New AppTitle"/>
+            {/*<UncontroledAccordion title={"Menu"}/>*/}
+            <OnOff on = {on} setOn = {setOn}/>
+            <UncontroledOnOff setOn = {setOn}/>{on.toString()}
+
+            <Accordion title={"Menu"} collapsed = {collapsed} setCollapsed={()=>setCollapsed(!collapsed)}/>
+            {/*<Accordion title={"Users"} collapsed={false}/>*/}
+            {/*<UncontroledRating/>*/}
+
+
+            <Rating value={ratingValue} changeValue={setRatingValue}/>
+
         </div>
     );
 }
 
-type PagePropsType = {
-    title: string;
+type AppTitlePropsType = {
+    title: string
 }
 
-function Page(props: PagePropsType) {
+
+const AppTitle = (props: AppTitlePropsType) => {
     return (
         <h1>{props.title}</h1>
     )
@@ -34,5 +45,3 @@ function Page(props: PagePropsType) {
 
 
 export default App;
-
-
