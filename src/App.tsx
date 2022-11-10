@@ -31,7 +31,6 @@ function App() {
         </div>
     );
 }
-
 type AppTitlePropsType = {
     title: string
 }
