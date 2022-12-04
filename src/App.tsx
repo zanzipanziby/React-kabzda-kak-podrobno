@@ -28,7 +28,21 @@ function App() {
             <OnOff on={on} setOn={setOn}/>
             <UncontroledOnOff setOn={setOn}/>{on.toString()}
 
-            <Accordion title={"Menu"} collapsed={collapsed} setCollapsed={() => setCollapsed(!collapsed)}/>
+            <Accordion
+                title={"Menu"}
+                collapsed={collapsed}
+                setCollapsed={() => setCollapsed(!collapsed)}
+                items={
+                [
+                    {title: "Dima", value: 1},
+                    {title:"Misha", value: 2},
+                    {title: "Vera", value: 3},
+                    {title: "Svetlana", value: 4},
+                    {title: "Jura", value: 5}
+                ]
+            }
+                onClick={(value) => {alert(value)}}
+            />
             {/*<Accordion title={"Users"} collapsed={false}/>*/}
             {/*<UncontroledRating/>*/}
 
