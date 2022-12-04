@@ -7,6 +7,11 @@ import {UncontroledAccordion} from "./components/UncontroledAccordion/Uncontrole
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff_1 from "./components/UncontroledOnOff/UncontroledOnOff";
 import UncontroledOnOff from "./components/UncontroledOnOff/UncontroledOnOff";
+import {
+    GetUncontrolledInputByButtonPress,
+    UncontrolledInput,
+    UnControlledInputTrackValue
+} from "./components/Input/Input";
 
 function App() {
 
@@ -18,19 +23,23 @@ function App() {
             <AppTitle title="AppTitle"/>
             <AppTitle title="New AppTitle"/>
             {/*<UncontroledAccordion title={"Menu"}/>*/}
-            <OnOff on = {on} setOn = {setOn}/>
-            <UncontroledOnOff setOn = {setOn}/>{on.toString()}
+            <OnOff on={on} setOn={setOn}/>
+            <UncontroledOnOff setOn={setOn}/>{on.toString()}
 
-            <Accordion title={"Menu"} collapsed = {collapsed} setCollapsed={()=>setCollapsed(!collapsed)}/>
+            <Accordion title={"Menu"} collapsed={collapsed} setCollapsed={() => setCollapsed(!collapsed)}/>
             {/*<Accordion title={"Users"} collapsed={false}/>*/}
             {/*<UncontroledRating/>*/}
 
 
             <Rating value={ratingValue} changeValue={setRatingValue}/>
+            <UncontrolledInput/>
+            <UnControlledInputTrackValue/>
+            <GetUncontrolledInputByButtonPress/>
 
         </div>
     );
 }
+
 type AppTitlePropsType = {
     title: string
 }
