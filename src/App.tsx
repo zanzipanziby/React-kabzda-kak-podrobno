@@ -14,6 +14,7 @@ import {
     UncontrolledInput,
     UnControlledInputTrackValue
 } from "./components/Input/Input";
+import {Select} from "./components/Select/Select";
 
 function App() {
 
@@ -33,15 +34,17 @@ function App() {
                 collapsed={collapsed}
                 setCollapsed={() => setCollapsed(!collapsed)}
                 items={
-                [
-                    {title: "Dima", value: 1},
-                    {title:"Misha", value: 2},
-                    {title: "Vera", value: 3},
-                    {title: "Svetlana", value: 4},
-                    {title: "Jura", value: 5}
-                ]
-            }
-                onClick={(value) => {alert(value)}}
+                    [
+                        {title: "Dima", value: 1},
+                        {title: "Misha", value: 2},
+                        {title: "Vera", value: 3},
+                        {title: "Svetlana", value: 4},
+                        {title: "Jura", value: 5}
+                    ]
+                }
+                onClick={(value) => {
+                    alert(value)
+                }}
             />
             {/*<Accordion title={"Users"} collapsed={false}/>*/}
             {/*<UncontroledRating/>*/}
@@ -55,6 +58,28 @@ function App() {
             <ControlledInput/>
             <ControlledCheckbox/>
             <ControlledSelect/>
+            <Select value={"1"}
+                    onChange={(value) => {alert(value)}}
+                    items={
+                        [
+                            {title: "Dima", value: "1"},
+                            {title: "Misha", value: "2"},
+                            {title: "Vera", value: "3"},
+                            {title: "Svetlana", value: "4"},
+                            {title: "Jura", value: "5"}
+                        ]
+                    }/>
+            <Select
+                    onChange={(value) => {alert(value)}}
+                    items={
+                        [
+                            {title: "Dima", value: "1"},
+                            {title: "Misha", value: "2"},
+                            {title: "Vera", value: "3"},
+                            {title: "Svetlana", value: "4"},
+                            {title: "Jura", value: "5"}
+                        ]
+                    }/>
 
         </div>
     );
