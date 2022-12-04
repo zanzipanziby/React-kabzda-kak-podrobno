@@ -8,6 +8,8 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff_1 from "./components/UncontroledOnOff/UncontroledOnOff";
 import UncontroledOnOff from "./components/UncontroledOnOff/UncontroledOnOff";
 import {
+    ControlledCheckbox,
+    ControlledInput, ControlledSelect,
     GetUncontrolledInputByButtonPress,
     UncontrolledInput,
     UnControlledInputTrackValue
@@ -35,6 +37,10 @@ function App() {
             <UncontrolledInput/>
             <UnControlledInputTrackValue/>
             <GetUncontrolledInputByButtonPress/>
+
+            <ControlledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
 
         </div>
     );
