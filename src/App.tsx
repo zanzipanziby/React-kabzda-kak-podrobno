@@ -26,7 +26,7 @@ function App() {
         <div className="App">
             <AppTitle title="AppTitle"/>
             <AppTitle title="New AppTitle"/>
-            {/*<UncontroledAccordion title={"Menu"}/>*/}
+            <UncontroledAccordion title={"Menu"}/>
             <OnOff on={on} setOn={setOn}/>
             <UncontroledOnOff setOn={setOn}/>{on.toString()}
 
