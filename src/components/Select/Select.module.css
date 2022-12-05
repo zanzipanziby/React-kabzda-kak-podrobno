@@ -1,0 +1,25 @@
+.select {
+
+    user-select: none;
+}
+
+.select h3 {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.items {
+    display: none;
+    border: 1px solid black;
+    position: absolute;
+    padding: 5px;
+}
+
+.select.active .items {
+    display: block;
+}
+
+.item.selected {
+    background-color: #61dafb;
+    color: white;
+}

@@ -21,6 +21,7 @@ function App() {
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     const [collapsed, setCollapsed] = useState<boolean>(true)
     const [on, setOn] = useState(false)
+    const [valueSelect,setValueSelect] = useState("1")
     return (
         <div className="App">
             <AppTitle title="AppTitle"/>
@@ -58,19 +59,20 @@ function App() {
             <ControlledInput/>
             <ControlledCheckbox/>
             <ControlledSelect/>
-            <Select value={"1"}
-                    onChange={(value) => {alert(value)}}
-                    items={
-                        [
-                            {title: "Dima", value: "1"},
-                            {title: "Misha", value: "2"},
-                            {title: "Vera", value: "3"},
-                            {title: "Svetlana", value: "4"},
-                            {title: "Jura", value: "5"}
-                        ]
-                    }/>
+            {/*<Select value={"2"}*/}
+            {/*        onChange={(value) => {alert(value)}}*/}
+            {/*        items={*/}
+            {/*            [*/}
+            {/*                {title: "Dima", value: "1"},*/}
+            {/*                {title: "Misha", value: "2"},*/}
+            {/*                {title: "Vera", value: "3"},*/}
+            {/*                {title: "Svetlana", value: "4"},*/}
+            {/*                {title: "Jura", value: "5"}*/}
+            {/*            ]*/}
+            {/*        }/>*/}
             <Select
-                    onChange={(value) => {alert(value)}}
+                    value={valueSelect}
+                    onChange={(value) => {setValueSelect(value)}}
                     items={
                         [
                             {title: "Dima", value: "1"},
