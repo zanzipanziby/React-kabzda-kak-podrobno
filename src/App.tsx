@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {UncontroledRating} from "./components/UncontroledRating/UncontroledRating";
@@ -15,7 +15,10 @@ import {
     UnControlledInputTrackValue
 } from "./components/Input/Input";
 import {Select} from "./components/Select/Select";
-import {NewMessagesCounter, Users} from "./ReactMemo";
+import {NewMessagesCounter, Users} from "./components/ReactMemo/ReactMemo";
+import {Factorial} from "./components/UseMemo/UseMemo1";
+import {HelpForReactMemo} from "./components/UseMemo/UseMemo2";
+import {LikeUseCallback} from "./components/UseCallback/UseCallback";
 
 function App() {
 
@@ -25,12 +28,11 @@ function App() {
     const [valueSelect, setValueSelect] = useState("1")
 
 
-
-
     //ReactMemo
 
-    const [counter,setCounter] = useState(0)
-    const [users,setUsers] = useState(["Dima","Misha","Vera","Svetlana","Jura"])
+    const [counter, setCounter] = useState(0)
+    const [users, setUsers] = useState(["Dima", "Misha", "Vera", "Svetlana", "Jura"])
+
     return (
         <div className="App">
             <AppTitle title="AppTitle"/>
@@ -95,13 +97,24 @@ function App() {
                 }/>
 
 
-            {/*----ReactMemo----*/}
+            {/*---- ReactMemo ----*/}
 
 
             <NewMessagesCounter count={counter}/>
             <Users users={users}/>
-            <button onClick={()=> {setCounter(counter + 1)}}>+</button>
+            <button onClick={() => {
+                setCounter(counter + 1)
+            }}>+
+            </button>
 
+
+            {/*------ useMemo -----*/}
+
+            <Factorial/>
+
+            <HelpForReactMemo/>
+            <hr/>
+            <LikeUseCallback/>
         </div>
     );
 }
