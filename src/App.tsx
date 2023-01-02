@@ -19,6 +19,7 @@ import {NewMessagesCounter, Users} from "./components/ReactMemo/ReactMemo";
 import {Factorial} from "./components/UseMemo/UseMemo1";
 import {HelpForReactMemo} from "./components/UseMemo/UseMemo2";
 import {LikeUseCallback} from "./components/UseCallback/UseCallback";
+import UseState from "./components/useState/UseState";
 
 function App() {
 
@@ -115,6 +116,7 @@ function App() {
             <HelpForReactMemo/>
             <hr/>
             <LikeUseCallback/>
+            <UseState/>
         </div>
     );
 }
