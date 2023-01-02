@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const UseState = () => {
+export const UseState = () => {
     function generateData() {
         return 1
     }
@@ -22,4 +22,3 @@ const UseState = () => {
     );
 };
 
-export default UseState;

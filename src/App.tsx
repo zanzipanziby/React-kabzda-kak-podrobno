@@ -19,7 +19,8 @@ import {NewMessagesCounter, Users} from "./components/ReactMemo/ReactMemo";
 import {Factorial} from "./components/UseMemo/UseMemo1";
 import {HelpForReactMemo} from "./components/UseMemo/UseMemo2";
 import {LikeUseCallback} from "./components/UseCallback/UseCallback";
-import UseState from "./components/useState/UseState";
+import {UseState} from "./components/useState/UseState";
+import {UseEffect, UseEffect2} from "./components/UseEffect/UseEffect";
 
 function App() {
 
@@ -117,6 +118,8 @@ function App() {
             <hr/>
             <LikeUseCallback/>
             <UseState/>
+            <UseEffect/>
+            <UseEffect2/>
         </div>
     );
 }
