@@ -21,7 +21,7 @@ import {HelpForReactMemo} from "./components/UseMemo/UseMemo2";
 import {LikeUseCallback} from "./components/UseCallback/UseCallback";
 import {UseState} from "./components/useState/UseState";
 import {UseEffect, UseEffect2} from "./components/UseEffect/UseEffect";
-import {Clock} from "./components/Clock/Clock";
+import {AnalogClock, Clock} from "./components/Clock/Clock";
 
 function App() {
 
@@ -123,6 +123,8 @@ function App() {
             <UseEffect2/>
             <br/>
             <Clock/>
+            <br/>
+            <AnalogClock/>
         </div>
     );
 }

@@ -1,0 +1,57 @@
+.analogClock {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: rotate(180deg);
+
+}
+
+.analogClock .dial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.analogClock .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 0;
+    background-color: #333;
+}
+
+.analogClock .hour {
+    width: 6px;
+    height: 50px;
+    margin-left: -3px;
+    border-radius: 6px 6px 0 0;
+
+}
+
+.analogClock .minute {
+    width: 4px;
+    height: 70px;
+    margin-left: -2px;
+    border-radius: 4px 4px 0 0;
+
+}
+
+.analogClock .second {
+    width: 2px;
+    height: 80px;
+    margin-left: -1px;
+    border-radius: 2px 2px 0 0;
+    background-color: red;
+}

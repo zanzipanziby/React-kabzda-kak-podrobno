@@ -29,7 +29,7 @@ export const UseEffect = () => {
     return (
         <div>
             <h1>Hello, {counter}</h1>
-            <button onClick={() => setCounter(counter + 1)}>+</button>
+            <button onClick={() => setCounter(counter => counter + 1)}>+</button>
         </div>
     );
 };
@@ -41,11 +41,12 @@ export const UseEffect2 = () => {
 
     useEffect(
         ()=> {
-            setInterval(
+            const interval = setInterval(
                 ()=> {
-                   setCounter(counter + 1)
+                   setCounter(counter => counter + 1)
                 }, 1000
             )
+            return () => clearInterval(interval)
         }, []
     )
 
