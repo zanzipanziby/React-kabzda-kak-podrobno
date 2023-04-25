@@ -62,3 +62,39 @@ export const UseEffect2 = () => {
 
 
 
+export const UseEffect3 = () => {
+    const [counter, setCounter] = useState(0)
+    console.log("component rendered")
+    useEffect(() => {
+        console.log("effect")
+    }, [])
+
+    return (
+        <div>
+            <span> hello: counter {counter}</span>
+            <button onClick={() => setCounter(counter => counter + 1)} >+</button>
+        </div>
+    )
+}
+
+export const KeysTrackerUseEffect3 = () => {
+    const [text, setText] = useState('')
+    const handler = (e: KeyboardEvent) => {
+        setText(text => text + e.key)
+    }
+    console.log("component rendered")
+    useEffect(() => {
+        window.addEventListener('keypress', handler)
+
+        return () => window.removeEventListener('keypress', handler)
+    }, [])
+
+    return (
+        <div>
+            <span> hello: counter {text}</span>
+        </div>
+    )
+}
+
+
+

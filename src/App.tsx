@@ -20,7 +20,7 @@ import {Factorial} from "./components/UseMemo/UseMemo1";
 import {HelpForReactMemo} from "./components/UseMemo/UseMemo2";
 import {LikeUseCallback} from "./components/UseCallback/UseCallback";
 import {UseState} from "./components/useState/UseState";
-import {UseEffect, UseEffect2} from "./components/UseEffect/UseEffect";
+import {KeysTrackerUseEffect3, UseEffect, UseEffect2} from "./components/UseEffect/UseEffect";
 import {AnalogClock, Clock} from "./components/Clock/Clock";
 
 function App() {
@@ -125,6 +125,9 @@ function App() {
             <Clock/>
             <br/>
             <AnalogClock/>
+            <br/>
+            <br/>
+            <KeysTrackerUseEffect3/>
         </div>
     );
 }
